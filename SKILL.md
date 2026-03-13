@@ -1,5 +1,5 @@
 ---
-name: business-logic-security-audit
+name: business-logic-audit
 description: Audit any codebase for business logic vulnerabilities — race conditions, state machine bypass, boundary violations, privilege escalation, and more. Covers backend, frontend, and mobile logic across any domain (fintech, e-commerce, SaaS, healthcare, crypto/DeFi, HR/payroll, and 15+ more) by first discovering the application's business rules, then systematically testing every critical operation against known attack patterns.
 ---
 
