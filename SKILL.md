@@ -507,7 +507,7 @@ The HTML report should include:
 - A `@media print` CSS block that hides the sidebar, the download button, and reformats the layout for clean single-column PDF output (white background, black text, no fixed positioning)
 - A header with the project name, audit date, and finding summary (e.g., "3 Critical, 2 High, 1 Medium")
 - Severity badges with color coding (Critical = red, High = orange, Medium = yellow, Low = blue)
-- Syntax-highlighted code blocks for vulnerable code and recommended fixes
+- Syntax-highlighted code blocks using inline `<span>` elements with color styles — apply colors for keywords (`if`, `const`, `return`, `async`, `await` — use a blue/purple), strings (green), comments (gray/muted), functions (yellow/gold), numbers (orange), and operators. Do NOT rely on external JS libraries — all highlighting must be baked into the HTML as colored spans
 - All styling must be inline CSS (no external dependencies) so the file is fully self-contained
 
 Example output structure:
