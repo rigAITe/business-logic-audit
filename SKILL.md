@@ -503,6 +503,8 @@ For each finding, use this structure:
 
 The HTML report should include:
 - A fixed **left sidebar** for the table of contents (width ~260px, scrollable, always visible) with the main content offset to the right — collapses to a top bar on mobile
+- A **"Download PDF" button** in the header that calls `window.print()` — the browser's print dialog lets the user save as PDF
+- A `@media print` CSS block that hides the sidebar, the download button, and reformats the layout for clean single-column PDF output (white background, black text, no fixed positioning)
 - A header with the project name, audit date, and finding summary (e.g., "3 Critical, 2 High, 1 Medium")
 - Severity badges with color coding (Critical = red, High = orange, Medium = yellow, Low = blue)
 - Syntax-highlighted code blocks for vulnerable code and recommended fixes
