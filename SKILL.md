@@ -489,6 +489,32 @@ For each finding, use this structure:
 [Code showing the correct implementation]
 ```
 
+### Step 4: Present and Save the Report
+
+**First, present the full report directly in the conversation** so the user can review findings immediately in the agent's UI (walkthrough view, chat, etc.). Display all findings with their full detail — do not summarize or truncate.
+
+**Then, save the report to the project directory** for persistence:
+
+1. **Create the output directory:** `.bizlogic-audit/` in the project root
+2. **Save the markdown report:** `.bizlogic-audit/report-YYYY-MM-DD.md` (for agent UIs, GitHub, and markdown renderers)
+3. **Save the HTML report:** `.bizlogic-audit/report-YYYY-MM-DD.html` (for sharing and browser viewing — styled with inline CSS for a clean, professional look with severity badges, syntax-highlighted code blocks, and a summary dashboard)
+4. **Suggest adding `.bizlogic-audit/` to `.gitignore`** — audit reports may contain sensitive vulnerability details. Mention that some teams prefer to track them in version control for accountability.
+
+The HTML report should include:
+- A fixed **left sidebar** for the table of contents (width ~260px, scrollable, always visible) with the main content offset to the right — collapses to a top bar on mobile
+- A header with the project name, audit date, and finding summary (e.g., "3 Critical, 2 High, 1 Medium")
+- Severity badges with color coding (Critical = red, High = orange, Medium = yellow, Low = blue)
+- Syntax-highlighted code blocks for vulnerable code and recommended fixes
+- All styling must be inline CSS (no external dependencies) so the file is fully self-contained
+
+Example output structure:
+```
+project-root/
+└── .bizlogic-audit/
+    ├── report-2026-03-13.md
+    └── report-2026-03-13.html
+```
+
 ## Severity Classification
 
 | Severity | Criteria |

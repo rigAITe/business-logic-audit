@@ -86,6 +86,19 @@ Audit this codebase for business logic vulnerabilities @path/to/project
 
 See [sample-report.md](sample-report.md) for an example of audit output — an assessment of a crypto-to-fiat trading platform with a React Native mobile app, demonstrating 9 findings across backend, frontend, and mobile layers.
 
+## Report Output
+
+After each audit, the skill saves the report to your project:
+
+```
+your-project/
+└── .bizlogic-audit/
+    ├── report-2026-03-13.md    ← for agent UIs, GitHub, markdown renderers
+    └── report-2026-03-13.html  ← for sharing, opens styled in any browser
+```
+
+Reports are timestamped so re-running the audit preserves history. Consider adding `.bizlogic-audit/` to your `.gitignore` since reports may contain sensitive vulnerability details.
+
 ## Compatible Agents
 
 Works with any agent that supports skills — including Claude Code, Cursor, Copilot, Gemini, and [37 more](https://github.com/vercel-labs/skills#supported-agents).
