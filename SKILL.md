@@ -495,11 +495,11 @@ For each finding, use this structure:
 
 **Then, save the report to the project directory** for persistence:
 
-1. **Create the output directory:** `bizlogic-audit/` in the project root
-2. **Save the markdown report:** `bizlogic-audit/report-YYYY-MM-DD.md` (for agent UIs, GitHub, and markdown renderers)
-3. **Save the HTML report:** `bizlogic-audit/report-YYYY-MM-DD.html` (for sharing and browser viewing — styled with inline CSS for a clean, professional look with severity badges, syntax-highlighted code blocks, and a summary dashboard)
-4. **Suggest adding `bizlogic-audit/` to `.gitignore`** — audit reports may contain sensitive vulnerability details. Mention that some teams prefer to track them in version control for accountability.
-5. **Open the HTML report in the browser** — run `open bizlogic-audit/report-YYYY-MM-DD.html` (macOS) or `xdg-open` (Linux) or `start` (Windows) so the user immediately sees the styled report.
+1. **Create the output directory:** `business-logic-audit/` in the project root
+2. **Save the markdown report:** `business-logic-audit/report-YYYY-MM-DD.md` (for agent UIs, GitHub, and markdown renderers)
+3. **Save the HTML report:** `business-logic-audit/report-YYYY-MM-DD.html` (for sharing and browser viewing — styled with inline CSS for a clean, professional look with severity badges, syntax-highlighted code blocks, and a summary dashboard)
+4. **Suggest adding `business-logic-audit/` to `.gitignore`** — audit reports may contain sensitive vulnerability details. Mention that some teams prefer to track them in version control for accountability.
+5. **Open the HTML report in the browser** — run `open business-logic-audit/report-YYYY-MM-DD.html` (macOS) or `xdg-open` (Linux) or `start` (Windows) so the user immediately sees the styled report.
 
 The HTML report should include:
 - A fixed **left sidebar** for the table of contents (width ~260px, scrollable, always visible) with the main content offset to the right — collapses to a top bar on mobile
@@ -513,7 +513,7 @@ The HTML report should include:
 Example output structure:
 ```
 project-root/
-└── bizlogic-audit/
+└── business-logic-audit/
     ├── report-2026-03-13.md
     └── report-2026-03-13.html
 ```
