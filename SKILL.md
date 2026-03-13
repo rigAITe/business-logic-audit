@@ -500,6 +500,10 @@ For each finding, use this structure:
 3. **Save the HTML report:** `business-logic-audit/report-YYYY-MM-DD.html` (for sharing and browser viewing — styled with inline CSS for a clean, professional look with severity badges, syntax-highlighted code blocks, and a summary dashboard)
 4. **Suggest adding `business-logic-audit/` to `.gitignore`** — audit reports may contain sensitive vulnerability details. Mention that some teams prefer to track them in version control for accountability.
 5. **Open the HTML report in the browser** — run `open business-logic-audit/report-YYYY-MM-DD.html` (macOS) or `xdg-open` (Linux) or `start` (Windows) so the user immediately sees the styled report.
+6. **Generate a PDF version** — use Chrome headless to convert the HTML report to PDF:
+   - macOS: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --print-to-pdf=business-logic-audit/report-YYYY-MM-DD.pdf --no-pdf-header-footer "file://ABSOLUTE_PATH/business-logic-audit/report-YYYY-MM-DD.html"`
+   - Linux: `google-chrome --headless --print-to-pdf=business-logic-audit/report-YYYY-MM-DD.pdf --no-pdf-header-footer "file://ABSOLUTE_PATH/business-logic-audit/report-YYYY-MM-DD.html"`
+   - If Chrome is not available, skip this step — the HTML report's "Download PDF" button is a fallback.
 
 The HTML report should include:
 - A fixed **left sidebar** for the table of contents (width ~260px, scrollable, always visible) with the main content offset to the right — collapses to a top bar on mobile
@@ -515,7 +519,8 @@ Example output structure:
 project-root/
 └── business-logic-audit/
     ├── report-2026-03-13.md
-    └── report-2026-03-13.html
+    ├── report-2026-03-13.html
+    └── report-2026-03-13.pdf
 ```
 
 ## Severity Classification

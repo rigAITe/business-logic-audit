@@ -94,7 +94,8 @@ After each audit, the skill saves the report to your project:
 your-project/
 └── business-logic-audit/
     ├── report-2026-03-13.md    ← for agent UIs, GitHub, markdown renderers
-    └── report-2026-03-13.html  ← for sharing, opens styled in any browser
+    ├── report-2026-03-13.html  ← for sharing, opens styled in any browser
+    └── report-2026-03-13.pdf   ← auto-generated via Chrome headless
 ```
 
 Reports are timestamped so re-running the audit preserves history. Consider adding `business-logic-audit/` to your `.gitignore` since reports may contain sensitive vulnerability details.
