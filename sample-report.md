@@ -1,4 +1,4 @@
-# Sample Audit Report: CryptoTrade Platform
+# Sample Audit Report: Trading Platform
 
 > **Target:** Trading platform with React Native mobile app and Node.js/Express backend  
 > **Scope:** Business logic vulnerabilities across backend API, webhook handlers, and mobile client  
