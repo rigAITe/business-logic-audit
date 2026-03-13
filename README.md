@@ -100,7 +100,7 @@ your-project/
 
 ### What happens automatically
 - 📄 The **HTML report opens in your default browser** automatically after generation — styled with severity badges, syntax-highlighted code, and a left sidebar table of contents
-- 📥 A **"Download PDF" button** in the HTML header lets you download the PDF directly (or falls back to your browser's print-to-PDF if no PDF was generated)
+- 📥 A **PDF is auto-generated** alongside the HTML if a Chromium browser is available (see below)
 
 ### PDF generation
 The PDF is auto-generated using **Chrome headless** (`--print-to-pdf`). This requires a **Chromium-based browser** installed on your machine:
