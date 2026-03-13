@@ -37,6 +37,10 @@ The skill includes pattern libraries for:
 
 For domains not listed, the skill instructs the agent to **generate custom patterns** based on the application's core business invariants.
 
+## Sample Report
+
+See [sample-report.md](sample-report.md) for an example of audit output — a real assessment of a crypto-to-fiat trading platform that found 7 business logic vulnerabilities including webhook forgery, race conditions, and state machine bypass.
+
 ## Compatible Agents
 
 Works with any agent that supports skills — including Claude Code, Cursor, Copilot, Gemini, and [37 more](https://github.com/vercel-labs/skills#supported-agents).
