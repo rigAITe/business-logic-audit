@@ -88,15 +88,32 @@ See [sample-report.md](sample-report.md) for an example of audit output — an a
 
 ## Report Output
 
-After each audit, the skill saves the report to your project:
+After each audit, the skill presents the full report in the conversation and saves three files to your project:
 
 ```
 your-project/
 └── business-logic-audit/
     ├── report-2026-03-13.md    ← for agent UIs, GitHub, markdown renderers
-    ├── report-2026-03-13.html  ← for sharing, opens styled in any browser
-    └── report-2026-03-13.pdf   ← auto-generated via Chrome headless
+    ├── report-2026-03-13.html  ← styled dark-theme report with sidebar TOC
+    └── report-2026-03-13.pdf   ← auto-generated if Chromium is available
 ```
+
+### What happens automatically
+- 📄 The **HTML report opens in your default browser** automatically after generation — styled with severity badges, syntax-highlighted code, and a left sidebar table of contents
+- 📥 A **"Download PDF" button** in the HTML header lets you download the PDF directly (or falls back to your browser's print-to-PDF if no PDF was generated)
+
+### PDF generation
+The PDF is auto-generated using **Chrome headless** (`--print-to-pdf`). This requires a **Chromium-based browser** installed on your machine:
+
+| Browser | PDF auto-generation |
+|---------|:---:|
+| **Google Chrome** | ✅ |
+| **Microsoft Edge** | ✅ |
+| **Brave** | ✅ |
+| **Safari** | ❌ |
+| **Firefox** | ❌ |
+
+If no Chromium browser is found, the PDF step is skipped — but the HTML report's "Download PDF" button still works in any browser via the print dialog.
 
 Reports are timestamped so re-running the audit preserves history. Consider adding `business-logic-audit/` to your `.gitignore` since reports may contain sensitive vulnerability details.
 
