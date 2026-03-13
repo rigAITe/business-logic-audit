@@ -56,6 +56,32 @@ For domains not listed, the skill instructs the agent to **generate custom patte
 | **Mobile** | 5 native/hybrid | Insecure storage, deep link hijacking, IAP receipt forgery, IPC abuse |
 | **Domain** | 18 libraries | Fintech, crypto, e-commerce, SaaS, healthcare, and 13 more |
 
+## Usage
+
+To trigger the skill, prompt your agent with:
+
+```
+Audit this codebase for business logic vulnerabilities
+```
+
+If you have **multiple projects** in your workspace or want to target a specific one:
+
+```
+Audit this codebase for business logic vulnerabilities @path/to/project
+```
+
+### More Prompts
+
+| Goal | Prompt |
+|------|--------|
+| **Full audit** | `Audit this codebase for business logic vulnerabilities` |
+| **Quick scan** | `Run a quick business logic security scan using the quick-start checklist` |
+| **Backend only** | `Audit the backend for business logic flaws — focus on the API layer` |
+| **Frontend only** | `Check this frontend for business logic vulnerabilities` |
+| **Mobile only** | `Audit this mobile app for business logic and mobile-specific security issues` |
+| **Specific concern** | `Check for race conditions and state machine bypass in the transaction flows` |
+| **Specific domain** | `Audit this codebase for fintech business logic vulnerabilities` |
+
 ## Sample Report
 
 See [sample-report.md](sample-report.md) for an example of audit output — an assessment of a crypto-to-fiat trading platform with a React Native mobile app, demonstrating 9 findings across backend, frontend, and mobile layers.
