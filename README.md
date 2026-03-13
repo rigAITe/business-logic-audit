@@ -1,11 +1,11 @@
-# bizlogic-audit
+# business-logic-audit
 
 An [agent skill](https://skills.sh) that audits any codebase for **business logic vulnerabilities** — the class of bugs where intended functionality is used in unintended ways to cause harm. Covers **backend, frontend, and mobile** logic.
 
 ## Install
 
 ```bash
-npx skills add rigAITe/bizlogic-audit
+npx skills add rigAITe/business-logic-audit
 ```
 
 ## What It Does
