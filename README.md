@@ -92,12 +92,12 @@ After each audit, the skill saves the report to your project:
 
 ```
 your-project/
-└── .bizlogic-audit/
+└── bizlogic-audit/
     ├── report-2026-03-13.md    ← for agent UIs, GitHub, markdown renderers
     └── report-2026-03-13.html  ← for sharing, opens styled in any browser
 ```
 
-Reports are timestamped so re-running the audit preserves history. Consider adding `.bizlogic-audit/` to your `.gitignore` since reports may contain sensitive vulnerability details.
+Reports are timestamped so re-running the audit preserves history. Consider adding `bizlogic-audit/` to your `.gitignore` since reports may contain sensitive vulnerability details.
 
 ## Compatible Agents
 
